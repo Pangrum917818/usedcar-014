@@ -118,20 +118,74 @@
                         <a href="productpickup.php" class="active"><i class="fa fa-truck fa-fw"></i> รถกระบะ</a>
                     </li>
                     <li>
-                        <a href="productvan.php" class="active"><i class="fa fa-truck fa-fw"></i> รถตู้</a>
+                        <a href="productpickup" class="active"><i class="fa fa-truck fa-fw"></i> รถตู้</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Page Content -->
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <?php
-                include("main.php");
-            ?>           
+<div class="container">
+    <div class="row">
+        <form action="saveproduct.php" class="form-horizontal" method="post" enctype="multipart/form-data"><br /><br /><br />
+               <h1>Post Car</h1>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">Car type</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txttype" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">Brand</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtbrand" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">PostDate</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtposd" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">Color</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtcolor" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">license</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtlic" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">province</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtprov" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="control-label col-md-3">Price</label>
+                    <div class="col-md-9">
+                    <input type="text" name="txtprice" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="picture" class="control-label col-md-3">Product Picture:</label>
+                    <div class="col-md-9">
+                    <input type="file" name="filepic" class="form-control-file" accept="image/* ">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-9">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
 
-        </div>
+        </form>              
+
     </div>
 </div>
 </body>

@@ -118,20 +118,19 @@
                         <a href="productpickup.php" class="active"><i class="fa fa-truck fa-fw"></i> รถกระบะ</a>
                     </li>
                     <li>
-                        <a href="productvan.php" class="active"><i class="fa fa-truck fa-fw"></i> รถตู้</a>
+                        <a href="productpickup" class="active"><i class="fa fa-truck fa-fw"></i> รถตู้</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Page Content -->
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <?php
-                include("main.php");
-            ?>           
+<div class="container">
+    <div class="row">
+        <form action="saveproduct.php" class="form-horizontal" method="post" enctype="multipart/form-data"><br /><br /><br />
+               <h1>Post Car</h1>
+                
+          
 
-        </div>
     </div>
 </div>
 </body>

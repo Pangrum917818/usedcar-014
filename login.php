@@ -1,5 +1,6 @@
 <?php
     session_start();
+   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +33,7 @@
         <![endif]-->
     </head>
     <body>
-
+    
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
@@ -44,12 +45,13 @@
                             <form role="form">
                                 <fieldset>
                                     <div class="form-group">
-                                        <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                        <input class="form-control" placeholder="Username" name="username " type="username" autofocus>
                                     </div>
                                     <div class="form-group">
                                         <input class="form-control" placeholder="Password" name="password" type="password" value="">
                                     </div>
                                     <!-- Change this to a button or input when using this as a form -->
+                                   
                                     <button class="btn btn-lg btn-success btn-block">Login</button>
                                 </fieldset>
                             </form>

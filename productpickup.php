@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include("connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,15 +125,41 @@
             </div>
         </div>
     </nav>
-    <!-- Page Content -->
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <?php
-                include("main.php");
-            ?>           
-
-        </div>
     </div>
+    <div class="container">
+    <div class="row">
+        <?php
+            $sql = "SELECT * FROM product ORDER BY id";
+            $result = $conn->query($sql);
+            if(!$result){
+                echo "Error During Retrival";
+            }
+            else{
+                //ดึงข้อมูล
+                while($prd=$result->fetch_object()){
+                    $prd->id; //$prd["id]
+            ?>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <a href="productdetail.php?pid=<?php echo $prd->id;?>">
+                        <img src="image/<?php echo $prd->picture;?>" alt="">
+                    </a>
+                    <div class="caption">
+                    <h3><?php echo $prd->brand;?></h3>
+                    <p><Strong>Year: </Strong><?php echo $prd->modelYear;?></p>
+                    <p><Strong>Color: </Strong><?php echo $prd->color;?></p>
+                    <p>
+                        <a href="#" class="btn btn-danger">Add To Basket</a>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <?php
+                }
+            }
+        ?>
+    </div>
+</div>
 </div>
 </body>
 </html>
